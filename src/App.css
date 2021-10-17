@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: rgb(238, 238, 238);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  margin: 60px 0px 15px 0px;
+  font-family: "noticia text", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app_desc {
+  margin: 0px 0px 50px 0px;
+  font-family: "Questrial", sans-serif;
+}
+
+#inp_search {
+  width: 80%;
+  height: 50px;
+  border-radius: 7px;
+  outline: none;
+  font-family: "Questrial", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 20%), 0 0 3px 0 rgb(0 0 0 / 10%);
+  padding: 0px 20px;
+  border: none;
+}
+
+#inp_search:focus {
+  box-shadow: 0px 0px 5px 2px #5161ce;
+}
+
+#loading_div {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load_class {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_container {
+  width: 90%;
+  margin-top: 50px;
+  height: auto;
+  margin-bottom: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card_item {
+  width: 15%;
+  padding: 30px 5px;
+  height: 180px;
+  padding-bottom: 5px;
+  margin: 10px 20px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 20%), 0 0 3px 0 rgb(0 0 0 / 10%);
+  background-color: white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.images_item{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.emoji_name {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-family: "Questrial", sans-serif;
+}
+
+.card_item:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.copy_icon {
+  width: 80%;
+  margin: 50px 0px 0px 0px;
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(185, 185, 185);
+}
+
+.copyright {
+  font-size: 15px;
+  height: 40px;
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1100px) {
+  .card_item {
+    width: 20%;
+    height: 230px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 750px) {
+  .card_container {
+    width: 98%;
+  }
+  .card_item {
+    margin: 10px 10px;
+  }
+  .card_item {
+    width: 150px;
+  }
+  .emoji_name {
+    font-size: 14px;
+  }
+  #inp_search,
+  .copy_icon {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    margin-top: 25px;
   }
 }
